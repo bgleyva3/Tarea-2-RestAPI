@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {getUsers, getUserById, createUser} from "../controllers/users.controller.js";
+import {getUsers, getUserById, createUser, updateUser, deleteUser} from "../controllers/users.controller.js";
 //Middleware enrutador (Router)
 
 const routes = Router();
@@ -8,8 +8,8 @@ const routes = Router();
 routes.get("/users", getUsers);
 routes.get("/users/:id", getUserById)
 routes.post("/users", createUser);
-routes.put("/users/:id");
-routes.delete("/users/:id");
+routes.put("/users/:id", updateUser);
+routes.delete("/users/:id", deleteUser);
 
 export default routes;
 
